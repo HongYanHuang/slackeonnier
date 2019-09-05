@@ -19,6 +19,13 @@ please check out [this article](https://medium.com/@henry48124/build-data-alert-
 ## Quick Start
 ### 1. Load library and setup
 ```R
+# Depeche mode
+devtools::install_github("HongYanHuang/slackeonnier")
+
+# Classic
+install.packages("slackeonnier")
+
+# load library
 library(slackeonnier)
 
 ## setup slackeonnier

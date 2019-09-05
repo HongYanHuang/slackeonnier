@@ -1,3 +1,7 @@
+library(ggplot)
+library(readr)
+library(slackeonnier)
+
 ## load test data
 orders <- read_csv(file = "./data/test_orders.csv")
 

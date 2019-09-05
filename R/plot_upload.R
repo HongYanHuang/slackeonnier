@@ -13,7 +13,6 @@ plot_upload <- function(plot = last_plot(),
          units = "cm",
          dpi = dpi,
          limitsize = TRUE)
-  print(ftmp)
   res <- POST(url = "https://slack.com/api/files.upload",
               add_headers(`Content-Type`="multipart/form-data",
                           Accept = "*/*"),
@@ -21,6 +20,7 @@ plot_upload <- function(plot = last_plot(),
                           token = slack_api_token,
                           channels = upload_channel_name)
   )
+  print(slack_api_token)
   url_schema <- content(res)$file$url_private[1]
   return(url_schema)
 }

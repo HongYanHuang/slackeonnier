@@ -1,18 +1,34 @@
+#box_plot_define <- function(boxplot_list, number) {
+#  color_status_config <- fromJSON(txt = Sys.getenv("STATUS_CONFIG"))
+#  if (number < boxplot_list[1]) {
+#    return(color_status_config$over_low)
+#  }else if (number <= boxplot_list[2]) {
+#    return(color_status_config$low)
+#  }else if (number <= boxplot_list[4]) {
+#    return(color_status_config$normal)
+#  }else if (number <= boxplot_list[5]) {
+#    return(color_status_config$high)
+#  }else {
+#    return(color_status_config$over_high)
+#  }
+#}
+
 box_plot_define <- function(boxplot_list, number) {
   if (number < boxplot_list[1]) {
-    Sys.setenv("STATUS_OVER_LOW") %>>%
-      return()
+    status = "⚠️*over low*⚠️"
+    color = "#ff0000"
   }else if (number <= boxplot_list[2]) {
-    Sys.setenv("STATUS_LOW") %>>%
-      return()
+    status = "low"
+    color = "#fbb034"
   }else if (number <= boxplot_list[4]) {
-    Sys.setenv("STATUS_NORMAL") %>>%
-      return()
+    status = "normal"
+    color = "#31a7ff"
   }else if (number <= boxplot_list[5]) {
-    Sys.setenv("STATUS_HIGH") %>>%
-      return()
+    status = "high"
+    color = "#7ac143"
   }else {
-    Sys.setenv("STATUS_OVER_HIGH") %>>%
-      return()
+    status = "⚠️*over high*⚠️"
+    color = "#ffd900"
   }
+  return(c(status, color))
 }

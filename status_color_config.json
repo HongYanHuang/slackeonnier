@@ -1,0 +1,7 @@
+{
+	"over_low": ["⚠️*Over Low*⚠️", "#ff0000"],
+	"low": ["Low", "#fbb034"],
+	"normal": ["Normal", "#31a7ff"],
+	"high": ["high", "#7ac143"],
+	"over_high": ["⚠️*over high*⚠️", "#ffd900"]
+}

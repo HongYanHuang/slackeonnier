@@ -10,14 +10,14 @@
 #' @examples
 #' plot_upload(my.plot)
 #' @export
-plot_upload <- function(plot = last_plot(),
+plot_upload <- function(plot = ggplot2::last_plot(),
                        file = "ggplot",
                        dpi = 300,
                        scale = 1,
                        slack_api_token = Sys.getenv("SLACK_UPLOAD_API_TOKEN"),
                        upload_channel_name = Sys.getenv("SLACK_UPLOAD_IMAGE_CHANNEL")) {
   ftmp <- tempfile(file, fileext = ".png")
-  ggsave(filename = ftmp,
+  ggplot2::ggsave(filename = ftmp,
          plot = plot,
          scale = scale,
          width = 16.2,
@@ -25,13 +25,13 @@ plot_upload <- function(plot = last_plot(),
          units = "cm",
          dpi = dpi,
          limitsize = TRUE)
-  res <- POST(url = "https://slack.com/api/files.upload",
+  res <- httr::POST(url = "https://slack.com/api/files.upload",
               add_headers(`Content-Type`="multipart/form-data",
                           Accept = "*/*"),
               body = list(file = upload_file(ftmp),
                           token = slack_api_token,
                           channels = upload_channel_name)
   )
-  url_schema <- content(res)$file$url_private[1]
+  url_schema <- httr::content(res)$file$url_private[1]
   return(url_schema)
 }

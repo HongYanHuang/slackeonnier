@@ -8,5 +8,5 @@ Description: Send your data alert with plot to slack easily. Basic idea please c
 License: MIT License
 Encoding: UTF-8
 LazyData: true
-Imports: dplyr, ggplot2, jsonlite, httr, pipeR, stringr, magrittr
+Imports: ggplot2, jsonlite, httr
 RoxygenNote: 6.1.1

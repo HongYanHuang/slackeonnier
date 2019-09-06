@@ -1,5 +1,5 @@
 
-![Demo](./data/demo.png)  
+![Demo](./data/og_demo.png)  
 # Slackeonnier :dove: 
 `Slackeonnier` - send data notifications with color and plot to Slack by :dove:.
   

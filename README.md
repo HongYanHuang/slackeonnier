@@ -1,30 +1,33 @@
 
 ![Feature](./data/slackeonnier_feature.png)
 # Slackeonnier
-Slackeonnier helps you sent data warning notification with plot on Slack with 1 min setup for data worker using R.
+Slackeonnier helps you sent warning notification with plot to Slack by :dove:.
+  
 
-
-
+  
 ![Demo](./data/demo.png)
 ## Feature
-* **Color management for different status**
-* Super light, easy setup
-* Made for data people, set your notification by yourself without dealing with http authenticate.
-* **KEEP YOUR BOSS CALM FROM ASKING YOU STUPID QUESTIONS**
+:rainbow: **Color management for different status**
+:canoe: Super light, easy setup
+:man_technologist: Made for data people, set your notification by yourself without dealing with http authenticate.
+:ng_man: **KEEP YOUR BOSS CALM FROM ASKING REDUNDENT QUESTIONS**  
+  
+  
+## How do this library work?
+please check out [my article](https://medium.com/@henry48124/build-data-alert-notification-on-slack-for-your-start-up-37db460fe812).
 
-
-## Basic Idea
-please check out [this article](https://medium.com/@henry48124/build-data-alert-notification-on-slack-for-your-start-up-37db460fe812).
-
-## Quick Start
-### 1. Load library and setup
+## Installation
 ```R
 # Depeche mode
 devtools::install_github("HongYanHuang/slackeonnier")
 
-# Classic
-install.packages("slackeonnier")
+# Classic - uploading
+# install.packages("slackeonnier")
+```
 
+## Quick Start
+### 1. Load library and setup
+```R
 # load library
 library(slackeonnier)
 

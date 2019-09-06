@@ -19,7 +19,7 @@ orders <- read.csv(file = "./data/test_orders.csv")
 order_status <- box_plot_define(boxplot(orders$orders)$stats, orders[nrow(orders),]$orders)
 
 ## prepare text sent to slack, can be change to any other you'd like to.
-order_info <- paste("Today's orders:", orders[nrow(orders),]$orders, "  status:", order_status[1])
+order_info <- paste("6/30 orders:", orders[nrow(orders),]$orders, "  status:", order_status[1])
 
 ## draw a plot using ggplot, can be skipped
 order.plot <- ggplot(data = orders, aes(x = date, y = orders, group = 1)) +

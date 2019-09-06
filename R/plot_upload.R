@@ -32,7 +32,6 @@ plot_upload <- function(plot = last_plot(),
                           token = slack_api_token,
                           channels = upload_channel_name)
   )
-  print(slack_api_token)
   url_schema <- content(res)$file$url_private[1]
   return(url_schema)
 }

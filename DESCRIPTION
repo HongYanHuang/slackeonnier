@@ -9,3 +9,4 @@ License: MIT License
 Encoding: UTF-8
 LazyData: true
 Imports: dplyr, ggplot2, jsonlite, httr, pipeR, stringr, magrittr
+RoxygenNote: 6.1.1

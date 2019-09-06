@@ -1,19 +1,13 @@
 
-![Feature](./data/slackeonnier_feature.png)
+![Demo](./data/demo.png)  
 # Slackeonnier
 `Slackeonnier` - sent warning notifications with color and plot to Slack by :dove:.
   
-  
 # Feature
-#### :rainbow: Color management  
-Color provides easier recognization whether there's abnormal signals or not.
-#### :canoe: Super light, easy setup  
+#### :traffic_light: Color management with customization   
 #### :man_technologist: Made for data people
-Easily built your notification by yourself without API.  
-#### :ng_man: KEEP YOUR BOSS FROM ASKING REDUNDENT QUESTIONS    
+#### :no_bell: KEEP YOUR BOSS FROM ASKING REDUNDENT QUESTIONS    
   
-
-![Demo](./data/demo.png)  
 ## How do this library work?
 please check out [my article](https://medium.com/@henry48124/build-data-alert-notification-on-slack-for-your-start-up-37db460fe812).
 

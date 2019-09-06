@@ -7,10 +7,10 @@ Slackeonnier helps you sent warning notification with plot to Slack by :dove:.
   
 ![Demo](./data/demo.png)
 ## Feature
-:rainbow: **Color management for different status**
-:canoe: Super light, easy setup
-:man_technologist: Made for data people, set your notification by yourself without dealing with http authenticate.
-:ng_man: **KEEP YOUR BOSS CALM FROM ASKING REDUNDENT QUESTIONS**  
+:rainbow: **Color management for different status**  
+:canoe: Super light, easy setup  
+:man_technologist: Made for data people, set your notification by yourself without dealing with http authenticate.  
+:ng_man: **KEEP YOUR BOSS CALM FROM ASKING REDUNDENT QUESTIONS**    
   
   
 ## How do this library work?

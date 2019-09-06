@@ -4,11 +4,11 @@
 `Slackeonnier` - send data notifications with color and plot to Slack by :dove:.
   
 ## Features
-#### :traffic_light: Color Management   
-#### :bar_chart: Made For Data People
+#### :traffic_light: Customized Color Management
+#### :bar_chart: Plot + Text + Color = DONE!
 #### :beers: Simple Integrate within your Workflow
 
-:no_bell: ~SHUT YOUR BOSS UP~ MUTE REDUNDENT QUESTIONS FROM YOUR BOSS
+:no_bell: Mute redundent quetions from your boss
   
 ## Basic Idea
 please check out [my article](https://medium.com/@henry48124/build-data-alert-notification-on-slack-for-your-start-up-37db460fe812).

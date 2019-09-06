@@ -43,6 +43,5 @@ plot_url <- plot_upload(plot = order.plot)
 atc <- attachment_format(former_text = order_info,
                   status_color = order_status[2],
                   image_url = plot_url)
-
 ## sent by slackeonnier
 slackeonnier_sent(atc)

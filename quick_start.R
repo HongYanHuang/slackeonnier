@@ -1,9 +1,8 @@
-library(ggplot)
-library(readr)
-library(slackeonnier)
+# Depeche mode
+devtools::install_github("HongYanHuang/slackeonnier")
 
-## load test data
-orders <- read_csv(file = "./data/test_orders.csv")
+# Load Library
+library(slackeonnier)
 
 ## setup slackeonnier
 slackeonnier_setup(upload_api_token = "your slack upload token",
@@ -12,13 +11,15 @@ slackeonnier_setup(upload_api_token = "your slack upload token",
                    sent_channel = "#general",
                    username = " ")
 
-## box_plot_define(boxplot, sample) can be change to any other methods you'd like to.
+## load test data
+orders <- read.csv(file = "./data/test_orders.csv")
+
+## box_plot_define() can be change to any other methods you'd like to.
 ## just a simple example
 order_status <- box_plot_define(boxplot(orders$orders)$stats, orders[nrow(orders),]$orders)
 
 ## prepare text sent to slack, can be change to any other you'd like to.
-today_text <- strftime(today() - 1, format = "%m/%d")
-order_info <- paste(today_text, "orders:", orders[nrow(orders),]$orders, "  status:", order_status[1])
+order_info <- paste("Today's orders:", orders[nrow(orders),]$orders, "  status:", order_status[1])
 
 ## draw a plot using ggplot, can be skipped
 order.plot <- ggplot(data = orders, aes(x = date, y = orders, group = 1)) +
@@ -35,7 +36,7 @@ order.plot <- ggplot(data = orders, aes(x = date, y = orders, group = 1)) +
         legend.direction = "horizontal") +
   theme(panel.grid.minor.x = element_blank())
 
-## upload your plot, can be skipped.
+## upload your plot
 plot_url <- plot_upload(plot = order.plot)
 
 ## formating previous resources

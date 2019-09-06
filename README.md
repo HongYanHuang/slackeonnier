@@ -21,7 +21,7 @@ Complete ideation and implementation please check out [medium article](https://m
 # Depeche mode
 devtools::install_github("HongYanHuang/slackeonnier")
 
-# Classic - upcoming
+# Classic - coming soon
 # install.packages("slackeonnier")
 ```
 

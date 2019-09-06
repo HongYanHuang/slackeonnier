@@ -7,7 +7,7 @@
 #### :traffic_light: Customized Color Management
 #### :bar_chart: Plot + Text + Color = DONE!
 
-:no_bell: Mute redundent quetions from your boss
+:no_bell: Mute redundant quetions from your boss
   
 ## Basic Idea
 1. Upload plot to slack in alternative channel, return a private url for sharing on slack

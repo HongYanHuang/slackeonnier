@@ -1,3 +1,13 @@
+#' Send attachment to Slack
+#'
+#' @param attachment json, comes from attachment_format()
+#' @param webhook url, use slackeonnier_setup() to set up
+#' @param channel string, use slackeonnier_setup() to set up
+#' @param username string, use slackeonnier_setup() to set up
+#' @example
+#' \dontrun{
+#'     slackeonnier_sent(my.attachment)
+#' }
 slackeonnier_sent <- function(attachment,
                           webhook = Sys.getenv("SLACK_INCOMING_WEBHOOK_URL"),
                           channel = Sys.getenv("SLACK_SENT_CHANNEL"),

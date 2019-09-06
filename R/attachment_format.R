@@ -1,4 +1,13 @@
-## attach your file as json
+#' Pack Plot, Text, and Color to attachment format
+#'
+#' @param former_text your text on attachment
+#' @param status_color hex
+#' @param image_url (optional) your plot url, must be https
+#' @param image_title (optional) text
+#' @return json file to attach
+#' @examples
+#' attachment_format('Order Status: Over High', '#FF0000', 'https://image.url', '20190901_Order')
+#' @export
 attachment_format <- function(former_text,
                               status_color,
                               image_url = NULL,

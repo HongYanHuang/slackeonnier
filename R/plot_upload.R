@@ -1,3 +1,15 @@
+#' Post ggPlot to slack channel and return private URL
+#'
+#' @param plot ggplot object, default last plot
+#' @param file prefix of your plot, default ggplot
+#' @param dpi default 300
+#' @param scale default 1
+#' @param slack_api_token file:upload token, or setup with slackeonnier_setup()
+#' @param upload_channel_name string, default #general
+#' @return private url on slack
+#' @examples
+#' plot_upload(my.plot)
+#' @export
 plot_upload <- function(plot = last_plot(),
                        file = "ggplot",
                        dpi = 300,

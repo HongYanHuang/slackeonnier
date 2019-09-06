@@ -1,18 +1,14 @@
-#box_plot_define <- function(boxplot_list, number) {
-#  color_status_config <- fromJSON(txt = Sys.getenv("STATUS_CONFIG"))
-#  if (number < boxplot_list[1]) {
-#    return(color_status_config$over_low)
-#  }else if (number <= boxplot_list[2]) {
-#    return(color_status_config$low)
-#  }else if (number <= boxplot_list[4]) {
-#    return(color_status_config$normal)
-#  }else if (number <= boxplot_list[5]) {
-#    return(color_status_config$high)
-#  }else {
-#    return(color_status_config$over_high)
-#  }
-#}
-
+#' Define outlier by quantile
+#'
+#' @param boxplot_list list, generate with boxplot()
+#' @param number, numeric
+#' @examples
+#' \dontrun{
+#'     quantile_list <- boxplot(orders$count)
+#'     box_plot_define(quantile_list, 38)
+#'     // will return c('normal', '#31a7ff')
+#' }
+#' @return list with status and color
 box_plot_define <- function(boxplot_list, number) {
   if (number < boxplot_list[1]) {
     status = "⚠️*over low*⚠️"
@@ -32,3 +28,18 @@ box_plot_define <- function(boxplot_list, number) {
   }
   return(c(status, color))
 }
+
+#box_plot_define <- function(boxplot_list, number) {
+#  color_status_config <- fromJSON(txt = Sys.getenv("STATUS_CONFIG"))
+#  if (number < boxplot_list[1]) {
+#    return(color_status_config$over_low)
+#  }else if (number <= boxplot_list[2]) {
+#    return(color_status_config$low)
+#  }else if (number <= boxplot_list[4]) {
+#    return(color_status_config$normal)
+#  }else if (number <= boxplot_list[5]) {
+#    return(color_status_config$high)
+#  }else {
+#    return(color_status_config$over_high)
+#  }
+#}

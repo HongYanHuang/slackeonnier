@@ -10,6 +10,10 @@
 #' }
 #' @return list with status and color
 box_plot_define <- function(boxplot_list, number) {
+  if(length(boxplot_list) != 5) {stop("must be a box plot list with 5 numberic vectors.")}
+  if(length(number) > 1) {stop("number must be a vector of length one")}
+  if(!is.numeric(number)) {stop("number must be a numeric vector")}
+
   if (number < boxplot_list[1]) {
     status = "⚠️*over low*⚠️"
     color = "#ff0000"

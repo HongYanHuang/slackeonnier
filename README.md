@@ -10,11 +10,8 @@
 :no_bell: Mute redundant quetions from your boss
   
 ## Basic Idea
-1. Upload plot to slack in alternative channel, return a private url for sharing on slack
-2. Pack plot, text as an attachment with color
-3. Send attachment to the channel you'd like to share
 
-Complete ideation and implementation please check out [medium article](https://medium.com/@henry48124/build-data-alert-notification-on-slack-for-your-start-up-37db460fe812).
+Complete ideation and implementation please check out [medium article](https://medium.com/@henry48124/hands-on-hack-built-your-own-data-notification-with-r-290e156b209c?source=friends_link&sk=a02412cfdd9855e8c3a099f1d549c1a3).
 
 ## Installation
 ```R

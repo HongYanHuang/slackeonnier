@@ -59,6 +59,7 @@ or you can run [example script](./quick_start.R)
 Recommended in setting environment argument for slackeonnier; otherwise you must provide in every function needed.  
 
 | Name | Format | Must | Description |  
+| --- | --- | --- | --- |
 | upload_api_token | string | Yes | file:upload token |  
 | upload_image_channel | string | Yes | alternative channel for uploading plot, default #random |  
 | incoming_webhook_url| string | Yes | incoming webhook for posting notification|  

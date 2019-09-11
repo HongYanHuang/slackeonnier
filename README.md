@@ -53,3 +53,13 @@ slackeonnier_sent(atc)
 ```
 
 or you can run [example script](./quick_start.R)
+
+## Main Functions
+#### slackeonnier_setup
+Recommended in setting environment argument for slackeonnier; otherwise you must provide in every function needed.
+| Name | Format | Must | Description |
+| upload_api_token | string | Yes | file:upload token |
+| upload_image_channel | string | Yes | alternative channel for uploading plot, default #random |
+| incoming_webhook_url| string | Yes | incoming webhook for posting notification
+| sent_channel| string | No | will post notification to this channel, default #general
+| username| string | No | name of slack App, default slackeonnier |

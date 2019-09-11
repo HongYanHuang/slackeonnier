@@ -55,13 +55,41 @@ slackeonnier_sent(atc)
 or you can run [example script](./quick_start.R)
 
 ## Main Functions
-#### slackeonnier_setup
+### slackeonnier_setup
 Recommended in setting environment argument for slackeonnier; otherwise you must provide in every function needed.  
 
-| Name | Format | Must | Description |  
+| Name | Format | Require | Description |  
 | --- | --- | --- | --- |
 | upload_api_token | string | Yes | file:upload token |  
 | upload_image_channel | string | Yes | alternative channel for uploading plot, default #random |  
 | incoming_webhook_url| string | Yes | incoming webhook for posting notification|  
 | sent_channel| string | No | will post notification to this channel, default #general|  
 | username| string | No | name of slack App, default slackeonnier |  
+  
+### plot_upload
+Upload your ggplot object to slack and return a private url for upcoming attach in message.  
+  
+| Name | Format | Require | Description |  
+| --- | --- | --- | --- |  
+| plot | ggplot object | Yes | ggplot object to upload |  
+| upload_api_token | string | Yes | You can also setup using slackeonnier_setup() |  
+| upload_image_channel | string | Yes | You can also setup using slackeonnier_setup() |  
+
+### attachment_format
+Plot + Text + Color formatting as an attachment object.  
+
+| Name | Format | Require | Description |  
+| --- | --- | --- | --- |  
+| former_text | string | Yes | text in message |  
+| status_color | string | Yes | Hex code |  
+| image_url | string | No | your url from plot_upload() |  
+
+### slackeonnier_sent
+sent attachment to slack channel
+  
+| Name | Format | Require | Description |  
+| --- | --- | --- | --- |  
+| attachment | json | Yes | text in message |  
+| webhook | string | Yes | use slackeonnier_setup() |  
+| channel | string | No | use slackeonnier_setup(), default #general |  
+| username | string | No |  use slackeonnier_setup(), default slackeonnier |  
